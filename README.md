@@ -60,4 +60,4 @@ This repository contains instructions on how to Dockerize a Django application f
 ### 10 Launch the Docker container:
         docker-compose up
 ### 11 Access the application:
-        `http://localhost:8000`
+        http://localhost:8000
