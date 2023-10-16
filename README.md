@@ -20,28 +20,28 @@ This repository contains instructions on how to Dockerize a Django application f
 ### 6 Create the Django App:
         py manage.py startapp blog
 ### 7 Create a Dockerfile:
-        ```Dockerfile
+```Dockerfile
 
-        #Use the official Python image as the base image
-        FROM python:3.8
-        
-        #Set environment variable for unbuffered Python output
-        ENV PYTHONBUFFERED=1
-        
-        #Set the working directory in the container
-        WORKDIR /django
-        
-        #Copy the requirements file into the container
-        COPY requirements.txt requirements.txt
-        
-        #Install project dependencies
-        RUN pip install -r requirements.txt
-        
-        #Copy the Django project code into the container
-        COPY .
-        
-        #Start the Django application
-        CMD python manage.py runserver 0.0.0.0:8000          
+#Use the official Python image as the base image
+FROM python:3.8
+
+#Set environment variable for unbuffered Python output
+ENV PYTHONBUFFERED=1
+
+#Set the working directory in the container
+WORKDIR /django
+
+#Copy the requirements file into the container
+COPY requirements.txt requirements.txt
+
+#Install project dependencies
+RUN pip install -r requirements.txt
+
+#Copy the Django project code into the container
+COPY .
+
+#Start the Django application
+CMD python manage.py runserver 0.0.0.0:8000          
 ### 8 Create a docker-compose file:
         ```
         version: "3.8"
