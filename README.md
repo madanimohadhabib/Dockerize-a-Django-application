@@ -41,20 +41,22 @@ RUN pip install -r requirements.txt
 COPY .
 
 #Start the Django application
-CMD python manage.py runserver 0.0.0.0:8000          
+CMD python manage.py runserver 0.0.0.0:8000
+```          
 ### 8 Create a docker-compose file:
-        ```
-        version: "3.8"
-        services:
-          app:
-            build: .
-            volumes:
-              - .:/django
-            ports:
-              - 8000:8000
-            image: app:django
-            container_name: my_first_django_container
-            command: python manage.py runserver 0.0.0.0:8000 
+```
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/django
+    ports:
+      - 8000:8000
+    image: app:django
+    container_name: my_first_django_container
+    command: python manage.py runserver 0.0.0.0:8000
+```
 ### 9 Build the Docker image:
         docker-compose build
 ### 10 Launch the Docker container:
