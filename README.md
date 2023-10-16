@@ -4,8 +4,8 @@ This repository contains instructions on how to Dockerize a Django application f
 
 ## Prerequisites
 ### Before you begin, make sure you have the following installed on your system:
-        https://docs.docker.com/get-docker/
-        https://docs.docker.com/compose/install/
+        [Docker](https://docs.docker.com/get-docker/ "Docker")
+        [Docker Compose](https://docs.docker.com/compose/install/ "Docker Compose")
 ## Steps
 ### 1 Install the virtual environment:
         py -m venv env
